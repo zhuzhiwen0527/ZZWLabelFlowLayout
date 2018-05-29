@@ -46,8 +46,10 @@
     }else{
         _itemsAttributes = [[NSMutableArray alloc] init];
     }
-    self.RH = self.sectionInset.left;
-    self.RW = self.sectionInset.top;
+    //起始高度
+    self.RH = self.sectionInset.top;
+    //左边距
+    self.RW = self.sectionInset.left;
     //item的总数
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     
@@ -94,6 +96,6 @@
     
     CGFloat width =self.collectionView.frame.size.width;
     
-    return CGSizeMake(width, self.RH);
+    return CGSizeMake(width, self.RH+self.sectionInset.bottom);
 }
 @end
