@@ -96,6 +96,6 @@
     
     CGFloat width =self.collectionView.frame.size.width;
     
-    return CGSizeMake(width, self.RH+self.sectionInset.bottom);
+    return CGSizeMake(width, self.RH+ self.sectionInset.bottom + self.H);
 }
 @end
